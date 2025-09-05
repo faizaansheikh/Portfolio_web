@@ -5,6 +5,7 @@ import About from "./components/About";
 import Career from "./components/Career";
 import Skills from "./components/Skills";
 import Education from "./components/Education";
+import Projects from "./components/Projects";
 
 export default function Home() {
    const [mounted, setMounted] = useState(false);
@@ -19,6 +20,7 @@ export default function Home() {
       <Career/>
       <Skills/>
       <Education/>
+      <Projects/>
     </div>
   );
 }

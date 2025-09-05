@@ -106,8 +106,11 @@ function Education() {
                     </div>
                 ))}
             </div>
+                
 
-            <div className='bg-[] w-full sm:w-[80%] px-6 md:px-0 h-[435px] flex items-center gap-6 flex-col lg:flex-row mt-22 mb-8'>
+                {/* Certificates */}
+
+            <div className='bg-[] h-auto w-full sm:w-[80%] px-6 md:px-0 h-[435px] flex items-center gap-6 flex-col lg:flex-row mt-22 mb-8'>
                 {cert.map((x, i) => (
                     <div onClick={() => window.open(x.link)} key={i} className='cursor-pointer bg-[#0A0914] w-full h-full border border-[#44444E] rounded-[10px] shadow-lg hover:shadow-[#5d2bbbff] relative hover:bottom-2 transition-all duration-600 ease-in-out'>
                         <div className='border border-[#44444E] w-full h-[200px] rounded-[10px] relative  overflow-hidden'>
