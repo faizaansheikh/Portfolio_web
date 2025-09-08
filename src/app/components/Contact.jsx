@@ -46,7 +46,7 @@ function Contact() {
             </div>
 
 
-            <div className='bg-[] w-[85%] h-[400px] mt-18 flex justify-around items-center flex-col lg:flex-row' >
+            <div className='bg-[] w-[85%] h-[auto] mt-18 flex justify-around items-center flex-col lg:flex-row' >
                 <div className='bg-[] w-full h-[400px] ' >
                     <p className='font-bold text-2xl py-3'>Let's Connect 🤝</p>
                     <p className='lg:pr-18 text-[15px] lg:text-[16px] text-[grey] font-[19px]'>I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision.
