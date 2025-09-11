@@ -1,4 +1,3 @@
-export const MainColor = '#0A0915'
-export const MainLightColor = '#141222'
-export const MainBtn = '#5d2bbbff'
-// export const MainBtn = '#744ebaff'
+export const MainColor = "var(--main-bg)";
+export const MainLightColor = "var(--main-light)";
+export const MainBtn = "var(--main-btn)";

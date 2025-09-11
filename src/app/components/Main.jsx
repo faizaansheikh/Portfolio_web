@@ -4,7 +4,9 @@ import Navbar from './Navbar'
 import MyButton from './MyButton'
 import Image from 'next/image'
 import profile from '../images/main1.jpg'
+import { useTheme } from 'next-themes'
 function Main() {
+  const { theme, setTheme } = useTheme();
 
   return (
     <>
@@ -16,11 +18,12 @@ function Main() {
 
 
       <div
+        id='main'
         style={{
-          backgroundImage: "url('/main.jpg')", // put the image in /public
-          backgroundSize: "cover",   // makes image cover full div
-          backgroundPosition: "center", // centers image
-          backgroundRepeat: "no-repeat" // avoids repeating pattern
+          backgroundImage: theme === 'light' ? "url('/main_light.jpg')" : "url('/main.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat"
         }}
         className="w-full h-auto py-20 md:py-26 flex justify-center"
       >
@@ -33,12 +36,12 @@ function Main() {
               Welcome to my portfolio!
             </p>
 
-            <h2 className="text-white text-6xl my-6">
+            <h2 className={`${theme === 'light' ? "text-black" : "text-white"} text-6xl my-6`}>
               Hi! My <br /> name's
               <span style={{ color: MainBtn }} className="font-bold"> Faizaan</span>
             </h2>
 
-            <p className="text-[18px] text-gray-400 my-2 pr-12">
+            <p className={`text-[18px] ${theme === 'light' ? "text-gray" : "text-gray-400"}  my-2 pr-12`}>
               Full Stack Developer crafting intuitive software that seamlessly connects real user needs with innovative technology.
               With a strong foundation in UI/UX design and end-to-end development,
               I bring bold ideas to life and deliver impactful, user-centric experiences.
@@ -55,7 +58,7 @@ function Main() {
               <Image
                 src={profile}
                 alt="Developer at desk"
-                style={{border:`3px dashed ${'grey'}`}}
+                style={{ border: `3px dashed ${'grey'}` }}
                 className="object-cover w-full h-full rounded-[100%]  p-6"
               />
             </div>

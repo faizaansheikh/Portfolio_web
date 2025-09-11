@@ -127,6 +127,7 @@ function Projects() {
         <div
             style={{ backgroundColor: MainLightColor }}
             className="w-full h-auto flex flex-col items-center pb-16"
+            id='projects'
         >
             <div className='flex flex-col  px-12 pt-13  md:pt-16'>
                 <p style={{ color: MainBtn }} className='text-center text-4xl font-bold py-2'>Featured Projects</p>

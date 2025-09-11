@@ -31,6 +31,7 @@ function Contact() {
         <div
             style={{ backgroundColor: MainColor }}
             className="w-full h-auto flex flex-col items-center pb-16"
+            id='contact'
         >
             {/* Heading */}
 

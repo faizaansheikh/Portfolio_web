@@ -8,14 +8,7 @@ function ToggleTheme() {
     
     return (
         <div>
-            {/* <button onClick={() => setTheme(theme === "light"  ? "dark" : "light")}>Theme</button>
-            <Form.Check // prettier-ignore
-                type="switch"
-                id="custom-switch"
-                label=""
-                onChange={(e) => setTheme((theme === "light" && e.target.checked) ? "dark" : "light")}
-            /> */}
-            {/* bg-black text-white px-4 py-2 my-2 */}
+     
             <div
                 className=""
                 onClick={() => setTheme(theme === "light" ? "dark" : "light")}

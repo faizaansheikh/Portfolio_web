@@ -60,7 +60,7 @@ function Education() {
         }
     ]
     return (
-        <div style={{ backgroundColor: MainColor }} className="w-full h-auto flex flex-col items-center pb-12">
+        <div style={{ backgroundColor: MainColor }} className="w-full h-auto flex flex-col items-center pb-12" id='education'>
             {/* Heading */}
 
             <div className='flex flex-col  px-12 pt-13  md:pt-18'>

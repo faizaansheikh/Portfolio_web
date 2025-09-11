@@ -25,7 +25,7 @@ function Career() {
     ];
 
     return (
-        <div style={{ backgroundColor: MainColor }} className="w-full h-auto flex flex-col items-center pb-12">
+        <div style={{ backgroundColor: MainColor }} className="w-full h-auto flex flex-col items-center pb-12" id='career'>
             {/* Heading */}
             <div className='flex flex-col  px-12 pt-13  md:pt-18'>
                 <p style={{ color: MainBtn }} className='text-center text-4xl font-bold py-2'>Working Experience</p>

@@ -5,36 +5,38 @@ import about from '../images/about.jpg'
 import MyButton from './MyButton'
 import { MdWork } from "react-icons/md";
 import { IoIosCode } from "react-icons/io";
+import { useTheme } from 'next-themes'
 function About() {
+    const { theme } = useTheme();
     let arr = [
         {
             date: '2024 - 2025',
             title: 'UI/UX Design',
             p: 'I provide UI/UX Design services focused on creating intuitive, engaging, and user-friendly interfaces that align with business goals and deliver exceptional digital experiences.',
-            icon: <MdWork  size={20} />
+            icon: <MdWork size={20} />
         },
         {
             date: '2024 - 2025',
             title: 'Website Development',
             p: 'I provide Website Development services that focus on building responsive, fast, modern and user-friendly websites designed to enhance your brand’s online presence and engage your audience effectively.',
-            icon: <MdWork  size={20} />
+            icon: <MdWork size={20} />
         },
         {
             date: '2022 - 2024',
             title: 'Web Apps Development',
             p: 'I deliver Web Applications solutions including  dashboards, e-commerce platforms,inventory systems, ERP, SaaS products, and real-time solutions that are scalable, secure, and performance-driven, tailored to meet business requirements while ensuring seamless user experiences across platforms.',
-            icon: <MdWork  size={20} />
+            icon: <MdWork size={20} />
         },
         {
             date: '2025-Present',
             title: 'Business Solutions',
             p: 'I offer Business Solutions that streamline operations, improve efficiency, and drive growth by leveraging technology to solve real-world challenges and support long-term success.',
-            icon: <MdWork  size={20} />
+            icon: <MdWork size={20} />
         },
     ];
     return (
 
-        <div style={{ backgroundColor: MainLightColor }} className='w-full h-[auto]  flex flex-col justify-center items-center pb-22'>
+        <div style={{ backgroundColor: MainLightColor }} className='w-full h-[auto]  flex flex-col justify-center items-center pb-22' >
             <div className='flex flex-col  px-12 pt-13  md:pt-18'>
                 <p style={{ color: MainBtn }} className='text-center text-4xl font-bold'>About Me</p>
                 <p className='text-center  md:text-lg py-2'>Learn more about my journey, my passion, and what drives me to create outstanding <br /> digital experiences. </p>
@@ -74,7 +76,7 @@ function About() {
                 </div>
             </div>
 
-            <div className='bg-[] w-[85%] h-auto mt-12 lg:mt-26'>
+            <div className='bg-[] w-[85%] h-auto mt-12 lg:mt-26' id='service'>
                 <p className='text-center text-2xl md:text-3xl pt-8  pb-8 md:pb-12'>What I Provide For You</p>
 
                 <div className='w-full h-auto lg:h-[auto] bg-[] flex justify-around items-center  flex-wrap gap-0'>
@@ -87,12 +89,12 @@ function About() {
 
 
                             {/* Box Content */}
-                            <div className="h-auto lg:h-[200px] bg-[#080711] flex items-start flex-col justify-start border border-[#44444E] rounded-[10px] px-5 py-5 w-full shadow-lg hover:shadow-[#5d2bbbff] w-full hlger:bottom-2 transition-all duration-800 ease-in-out">
+                            <div className={`h-auto lg:h-[200px] text-black ${theme === 'light' ? ' bg-white' : 'text-white bg-[#080711]'} flex items-start flex-col justify-start border border-[#44444E] rounded-[10px] px-5 py-5 w-full shadow-lg hover:shadow-[#5d2bbbff] w-full hlger:bottom-2 transition-all duration-800 ease-in-out`}>
                                 {/* <div className='flex items-center'>
                                     <span className='pr-2'><IoIosCode  size={24} /></span>
                                  
                                 </div> */}
-                                <div className="text-white font-bold text-lg sm:text-xl pt-2 pb-1 flex items-center gap-2" ><span style={{backgroundColor:MainBtn}} className='rounded-[100%] p-2'>{x.icon}</span>{x.title}</div>
+                                <div className=" font-bold text-lg sm:text-xl pt-2 pb-1 flex items-center gap-2" ><span style={{ backgroundColor: MainBtn }} className='rounded-[100%] p-2 text-white'>{x.icon}</span>{x.title}</div>
                                 <div className="text-gray-400 text-[12px] lg:text-[14px] pt-3 " >{x.p}</div>
                             </div>
                         </div>

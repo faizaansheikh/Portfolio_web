@@ -71,6 +71,7 @@ function Skills() {
         <div
             style={{ backgroundColor: MainLightColor }}
             className="w-full h-auto flex flex-col items-center pb-16"
+            id='skills'
         >
             {/* Heading */}
             <div className='flex flex-col  px-12 pt-13  md:pt-18'>
