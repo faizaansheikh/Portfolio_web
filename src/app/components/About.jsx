@@ -10,26 +10,26 @@ function About() {
         {
             date: '2024 - 2025',
             title: 'UI/UX Design',
-            p: 'I provide Website Development services that focus on building responsive, modern, and user-friendly websites designed to enhance your brand’s online presence and engage your audience effectively.',
-            icon: <MdWork color={MainBtn} size={25} />
+            p: 'I provide UI/UX Design services focused on creating intuitive, engaging, and user-friendly interfaces that align with business goals and deliver exceptional digital experiences.',
+            icon: <MdWork  size={20} />
         },
         {
             date: '2024 - 2025',
             title: 'Website Development',
-            p: 'I provide Website Development services that focus on building responsive, modern, and user-friendly websites designed to enhance your brand’s online presence and engage your audience effectively.',
-            icon: <MdWork color={MainBtn} size={25} />
+            p: 'I provide Website Development services that focus on building responsive, fast, modern and user-friendly websites designed to enhance your brand’s online presence and engage your audience effectively.',
+            icon: <MdWork  size={20} />
         },
         {
             date: '2022 - 2024',
             title: 'Web Apps Development',
-            p: 'I deliver Web Applications solutions that are scalable, secure, and performance-driven, tailored to meet business requirements while ensuring seamless user experiences across platforms.',
-            icon: <MdWork color={MainBtn} size={25} />
+            p: 'I deliver Web Applications solutions including  dashboards, e-commerce platforms,inventory systems, ERP, SaaS products, and real-time solutions that are scalable, secure, and performance-driven, tailored to meet business requirements while ensuring seamless user experiences across platforms.',
+            icon: <MdWork  size={20} />
         },
         {
             date: '2025-Present',
             title: 'Business Solutions',
             p: 'I offer Business Solutions that streamline operations, improve efficiency, and drive growth by leveraging technology to solve real-world challenges and support long-term success.',
-            icon: <MdWork color={MainBtn} size={25} />
+            icon: <MdWork  size={20} />
         },
     ];
     return (
@@ -81,18 +81,18 @@ function About() {
                     {arr.map((x, i) => (
                         <div
                             key={i}
-                            className={`relative  md:w-[600px] mb-6  `}
+                            className={`w-full md:w-[400px] lg:w-[400px] xl:w-[600px] mb-6  `}
                         >
 
 
 
                             {/* Box Content */}
-                            <div className="h-auto lg:h-[200px] bg-[#080711] flex items-start flex-col justify-start border border-[#44444E] rounded-[10px] px-5 py-5 w-full shadow-lg hover:shadow-[#5d2bbbff] relative hover:bottom-2 transition-all duration-800 ease-in-out">
+                            <div className="h-auto lg:h-[200px] bg-[#080711] flex items-start flex-col justify-start border border-[#44444E] rounded-[10px] px-5 py-5 w-full shadow-lg hover:shadow-[#5d2bbbff] w-full hlger:bottom-2 transition-all duration-800 ease-in-out">
                                 {/* <div className='flex items-center'>
-                                    <span className='pr-2'><IoIosCode color={MainBtn} size={24} /></span>
+                                    <span className='pr-2'><IoIosCode  size={24} /></span>
                                  
                                 </div> */}
-                                <div className="text-white font-bold text-lg sm:text-xl pt-2 pb-1 flex items-center gap-2" ><span>{x.icon}</span>{x.title}</div>
+                                <div className="text-white font-bold text-lg sm:text-xl pt-2 pb-1 flex items-center gap-2" ><span style={{backgroundColor:MainBtn}} className='rounded-[100%] p-2'>{x.icon}</span>{x.title}</div>
                                 <div className="text-gray-400 text-[12px] lg:text-[14px] pt-3 " >{x.p}</div>
                             </div>
                         </div>
