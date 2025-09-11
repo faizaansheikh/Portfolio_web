@@ -40,7 +40,7 @@ function Skills() {
             { label: "Shadcn/UI", icon: (size, color) => <SiShadcnui size={size} color={color} /> },
             { label: "Framer Motion", icon: (size, color) => <TbBrandFramerMotion size={size} color={color} /> },
             { label: "Ant Design", icon: (size, color) => <SiAntdesign size={size} color={color} /> },
-           
+
 
         ],
         backend: [
@@ -60,7 +60,7 @@ function Skills() {
             { label: "AWS", icon: (size, color) => <FaAws size={size} color={color} /> },
             { label: "Docker", icon: (size, color) => <FaDocker size={size} color={color} /> },
             { label: "CI/CD", icon: (size, color) => <IoGitBranchOutline size={size} color={color} /> },
-           
+
 
         ],
     };
@@ -73,17 +73,11 @@ function Skills() {
             className="w-full h-auto flex flex-col items-center pb-16"
         >
             {/* Heading */}
-            <div className="flex flex-col px-6 sm:px-12 pt-16 sm:pt-20">
-                <p
-                    style={{ color: MainBtn }}
-                    className="text-center text-2xl sm:text-4xl font-bold"
-                >
-                    Skills & Technologies
-                </p>
-                <p className="text-center text-sm sm:text-lg py-2">
-                    My technical toolkit for building exceptional digital experiences 🛠️
-                </p>
+            <div className='flex flex-col  px-12 pt-13  md:pt-18'>
+                <p style={{ color: MainBtn }} className='text-center text-4xl font-bold py-2'>Skills & Technologies</p>
+                <p className='text-center  md:text-lg py-2'> My technical toolkit for building exceptional digital experiences 🛠️ </p>
             </div>
+           
 
             {/* Tabs */}
             <div className="flex gap-6 mt-8">

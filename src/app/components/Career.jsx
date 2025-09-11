@@ -5,19 +5,19 @@ import { IoIosCode } from "react-icons/io";
 function Career() {
     let arr = [
         {
-            date: '2023-2024',
+            date: '2024 - 2025',
             title: 'Diggit Software Solutions LLC',
             p: 'I have worked on Diggit Software solutions for 4 months as a frontend developer',
             icon: <MdWork color={MainBtn} size={18} />
         },
         {
-            date: '2023-2024',
+            date: '2022 - 2024',
             title: 'Finosys Private Limited',
             p: 'I have worked on Finosys Private Limited for 3 years as a full stack developer',
             icon: <MdWork color={MainBtn} size={18} />
         },
         {
-            date: '2023-2024',
+            date: '2025-Present',
             title: 'Freelance Work',
             p: 'I have worked as a freelancer, during which I developed and delivered two business websites for Az Scientific Solutions',
             icon: <MdWork color={MainBtn} size={18} />
@@ -27,12 +27,9 @@ function Career() {
     return (
         <div style={{ backgroundColor: MainColor }} className="w-full h-auto flex flex-col items-center pb-12">
             {/* Heading */}
-            <div className="flex flex-col px-6 sm:px-12 pt-16 sm:pt-20">
-                <p style={{ color: MainBtn }} className="text-center text-2xl sm:text-4xl font-bold">Working Experience</p>
-                <p className="text-center text-sm sm:text-lg py-2">
-                    Learn more about my journey, my passion, and what drives me to create outstanding <br className="hidden sm:block" />
-                    digital experiences. 💪
-                </p>
+            <div className='flex flex-col  px-12 pt-13  md:pt-18'>
+                <p style={{ color: MainBtn }} className='text-center text-4xl font-bold py-2'>Working Experience</p>
+                <p className='text-center  md:text-lg py-2'>Proven track record of delivering scalable and efficient software solutions across diverse industries </p>
             </div>
 
             {/* Vertical Steps */}
@@ -43,7 +40,7 @@ function Career() {
                 {arr.map((x, i) => (
                     <div
                         key={i}
-                        className="relative flex flex-col sm:flex-row items-start mb-10"
+                        className="relative flex flex-col sm:flex-row items-start mb-10 "
                     >
 
                         {/* Step Icon */}
@@ -52,7 +49,7 @@ function Career() {
                         </div>
 
                         {/* Box Content */}
-                        <div className="sm:ml-8 mt-4 sm:mt-0 bg-[#080711] border border-[#44444E] rounded-[10px] p-4 w-full">
+                        <div className="sm:ml-8 mt-4 sm:mt-0 bg-[#080711] border border-[#44444E] rounded-[10px] p-4 w-full shadow-lg hover:shadow-[#5d2bbbff] relative hover:bottom-2 transition-all duration-800 ease-in-out">
                             <div className='flex items-center'>
                                 <span className='pr-2'><IoIosCode color={MainBtn} size={24} /></span>
                                 <span style={{ backgroundColor: MainLightColor, color: MainBtn }} className='p-1 rounded-[5px] w-[100px] text-center text-sm'> {x.date} </span>

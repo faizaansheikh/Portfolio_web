@@ -12,21 +12,21 @@ import { LiaCertificateSolid } from "react-icons/lia";
 function Education() {
     let arr = [
         {
-            date: '2023-2024',
+            date: 'Year 2023 - 2027',
             title: 'Bachelors In Business And Information Technology',
             subtitle: 'Virtual University Of Pakistan',
             p: 'Currently pursuing a Bachelors degree in Information Technology. As a third-year student, Im building a strong foundation in algorithms, data structures, software engineering, and computer networks.',
             icon: <GiGraduateCap color={MainBtn} size={18} />
         },
         {
-            date: '2023-2024',
+            date: 'Year 2017 - 2019',
             title: 'Intermediate',
             subtitle: 'Govt Degree Boys College',
             p: 'I have completed my Intermediate in Pre-Engineering',
             icon: <GiGraduateCap color={MainBtn} size={18} />
         },
         {
-            date: '2023-2024',
+            date: 'Year 2016',
             title: 'Matriculation',
             subtitle: 'Jennings Private Secondary School',
             p: 'I have completed my Matriculation in Computer Science',
@@ -62,12 +62,14 @@ function Education() {
     return (
         <div style={{ backgroundColor: MainColor }} className="w-full h-auto flex flex-col items-center pb-12">
             {/* Heading */}
-            <div className="flex flex-col px-6 sm:px-12 pt-16 sm:pt-20">
-                <p style={{ color: MainBtn }} className="text-center text-2xl sm:text-4xl font-bold">Education & Certifications</p>
-                <p className="text-center text-sm sm:text-lg py-2">
-                    My academic journey and professional qualifications that validate my expertise. 🎓
-                </p>
+
+            <div className='flex flex-col  px-12 pt-13  md:pt-18'>
+                <p style={{ color: MainBtn }} className='text-center text-4xl font-bold py-2'>Education & Certifications</p>
+                <p className='text-center  md:text-lg py-2'> My academic journey and professional qualifications that validate my expertise. 🎓 </p>
             </div>
+
+
+
 
             {/* Vertical Steps */}
 
@@ -106,13 +108,13 @@ function Education() {
                     </div>
                 ))}
             </div>
-                
 
-                {/* Certificates */}
 
-            <div className='bg-[] h-auto w-full sm:w-[80%] px-6 md:px-0 h-[435px] flex items-center gap-6 flex-col lg:flex-row mt-22 mb-8'>
+            {/* Certificates */}
+
+            <div className='bg-[] h-auto lg:h-[445px] w-full sm:w-[80%] px-6 md:px-0 h-[435px] flex items-center gap-6 flex-col lg:flex-row mt-22 mb-8'>
                 {cert.map((x, i) => (
-                    <div onClick={() => window.open(x.link)} key={i} className='cursor-pointer bg-[#0A0914] w-full h-full border border-[#44444E] rounded-[10px] shadow-lg hover:shadow-[#5d2bbbff] relative hover:bottom-2 transition-all duration-600 ease-in-out'>
+                    <div onClick={() => window.open(x.link)} key={i} className='cursor-pointer bg-[#0A0914] w-full h-full border border-[#44444E] rounded-[10px] shadow-lg hover:shadow-[#5d2bbbff] relative hover:bottom-2 transition-all duration-800 ease-in-out my-2 lg:my-0'>
                         <div className='border border-[#44444E] w-full h-[200px] rounded-[10px] relative  overflow-hidden'>
                             <Image
                                 src={x.img}
@@ -130,7 +132,7 @@ function Education() {
 
                                 <p className='text-lg my-1 font-bold'>{x.title}</p>
                                 <p className='text-lg my-1' style={{ color: MainBtn }}>{x.title2}</p>
-                             {(i === 0 || i === 2) &&    <br />}
+                                {<br />}
                                 <div className='flex items-center gap-2 my-2'>
                                     <p className='text-sm text-[grey] '>{x.date}</p>
                                     <span className='px-2 py-1 text-sm rounded-[13px] flex items-center gap-1' style={{ backgroundColor: MainLightColor, color: MainBtn }}>Verified <TiTick /></span>

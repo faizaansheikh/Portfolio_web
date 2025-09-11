@@ -33,17 +33,14 @@ function Contact() {
             className="w-full h-auto flex flex-col items-center pb-16"
         >
             {/* Heading */}
-            <div className="flex flex-col px-6 sm:px-12 pt-16 sm:pt-20">
-                <p
-                    style={{ color: MainBtn }}
-                    className="text-center text-2xl sm:text-4xl font-bold"
-                >
-                    Get In Touch
-                </p>
-                <p className="text-center text-sm sm:text-lg py-2">
-                    Have a project in mind or want to discuss? Feel free to reach out!
-                </p>
+
+            <div className='flex flex-col  px-12 pt-13  md:pt-18'>
+                <p style={{ color: MainBtn }} className='text-center text-4xl font-bold py-2'>Get In Touch</p>
+                <p className='text-center  md:text-lg py-2'>  Have a project in mind or want to discuss? Feel free to reach out! </p>
             </div>
+
+
+           
 
 
             <div className='bg-[] w-[85%] h-[auto] mt-18 flex justify-around items-center flex-col lg:flex-row' >
