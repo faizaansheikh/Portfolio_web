@@ -1,8 +1,16 @@
 import React from 'react'
 import { MainBtn, MainLightColor } from '../utils'
-import img1 from '../images/c1.png'
+import img1 from '../images/1.1.png'
 import MyButton from './MyButton'
 import Image from 'next/image'
+
+import img2 from '../images/Screenshot 2025-09-11 181355.png'
+import img3 from '../images/2.png'
+import img4 from '../images/3.png'
+import img5 from '../images/5.png'
+import img6 from '../images/4.png'
+import imgp from '../images/port.png'
+import img7 from '../images/6.png'
 
 function Projects() {
     let arr = [
@@ -11,48 +19,64 @@ function Projects() {
             desc: 'Introducing our car renting system: effortlessly book the perfect car for any occasion. This platform offers a diverse selection of vehicles with detailed descriptions and photos. Simply choose, book, and go! our React-powered admin panel streamlines operations. Manage bookings, update listings, and monitor performance from one centralized hub',
             techs: ['Next.js', 'Tailwind CSS', 'Antd', 'PostgreSql'],
             demo: '',
-            code: '',
+            code: 'https://github.com/faizaansheikh/Core',
             img: img1
         },
         {
             title: 'Car Renting System',
             desc: 'Introducing our car renting system: effortlessly book the perfect car for any occasion. This platform offers a diverse selection of vehicles with detailed descriptions and photos. Simply choose, book, and go! our React-powered admin panel streamlines operations. Manage bookings, update listings, and monitor performance from one centralized hub',
             techs: ['React.js', 'Node.js', 'MongoDB'],
-            demo: '',
-            code: '',
-            img: img1
+            demo: 'https://automobile-rental-app-psi.vercel.app/login',
+            code: 'https://github.com/faizaansheikh/library_app',
+            img: img2
         },
         {
-            title: 'Business Website for Az Scientific Solutions',
+            title: 'Business Website',
             desc: 'A seamless navigation and stunning design with our website UI, meticulously crafted using React. This dynamic interface features multiple responsive pages, ensuring an optimal viewing experience across devices. Explore a user-friendly interface designed to enhance your browsing journey. Explore the convergence of functionality and aesthetics as you delve into our meticulously designed interface.',
             techs: ['HTML 5', 'CSS 3', 'React.js'],
-            demo: '',
-            code: '',
-            img: img1
+            demo: 'https://az-website.vercel.app/',
+            code: 'https://github.com/faizaansheikh/Az_website',
+            img: img7
+        },
+        {
+            title: 'Weather Tracking App',
+            desc: 'A seamless navigation and stunning design with our website UI, meticulously crafted using React. This dynamic interface features multiple responsive pages, ensuring an optimal viewing experience across devices. Explore a user-friendly interface designed to enhance your browsing journey. Explore the convergence of functionality and aesthetics as you delve into our meticulously designed interface.',
+            techs: ['HTML 5', 'CSS 3', 'React.js'],
+            demo: 'https://weathernew-three.vercel.app/',
+            code: 'https://github.com/faizaansheikh/weathernew',
+            img: img5
         },
         {
             title: 'Hotel Website',
             desc: 'A seamless navigation and stunning design with our website UI, meticulously crafted using React. This dynamic interface features multiple responsive pages, ensuring an optimal viewing experience across devices. Explore a user-friendly interface designed to enhance your browsing journey. Explore the convergence of functionality and aesthetics as you delve into our meticulously designed interface.',
             techs: ['HTML 5', 'CSS 3', 'React.js'],
-            demo: '',
-            code: '',
-            img: img1
+            demo: 'https://xresort-53b181.netlify.app/',
+            code: 'https://github.com/faizaansheikh/hotelweb',
+            img: img4
+        },
+        {
+            title: 'Portfolio Website',
+            desc: 'A seamless navigation and stunning design with our website UI, meticulously crafted using React. This dynamic interface features multiple responsive pages, ensuring an optimal viewing experience across devices. Explore a user-friendly interface designed to enhance your browsing journey. Explore the convergence of functionality and aesthetics as you delve into our meticulously designed interface.',
+            techs: ['HTML 5', 'CSS 3', 'React.js'],
+            demo: 'https://portfolio-faizaan.vercel.app/',
+            code: 'https://github.com/faizaansheikh/Portfolio',
+            img: imgp
         },
         {
             title: 'Weather App',
             desc: 'Explore the worlds weather with our innovative Weather App, meticulously crafted using React and integrated with a robust API. This user-friendly application provides real-time weather updates, forecasts, and intuitive visuals, all tailored for your convenience our responsive design ensures a seamless experience across devices.',
             techs: ['HTML 5', 'CSS 3', 'Javascript', 'React.js'],
-            demo: '',
-            code: '',
-            img: img1
+            demo: 'https://weather-a55d2.web.app/',
+            code: 'https://github.com/faizaansheikh/Weatherapp',
+            img: img3
         },
         {
             title: 'Expense Tracker App',
             desc: 'Our project is an innovative expense management application developed using React and other cutting-edge technologies. This app is designed to streamline the process of tracking and managing expenses, offering users a user-friendly interface and powerful functionalities',
             techs: ['HTML 5', 'CSS 3', 'Javascript', 'React.js'],
-            demo: '',
-            code: '',
-            img: img1
+            demo: 'https://expenseappx.netlify.app/',
+            code: 'https://github.com/faizaansheikh/Expense_app',
+            img: img6
         }
     ]
     const left = (x) => {
@@ -89,8 +113,13 @@ function Projects() {
 
             {/* Buttons */}
             <div className="flex gap-4 mt-4">
-                <MyButton label="Live Demo" type={'fill'} />
-                <MyButton label="Source Code" />
+                <a href={x.demo} target='_blank'>
+                    <MyButton label="Live Demo" type={'fill'} />
+                </a>
+                <a href={x.code} target='_blank'>
+
+                    <MyButton label="Source Code" />
+                </a>
             </div>
         </div>
     }
@@ -104,14 +133,14 @@ function Projects() {
                 <p className='text-center  md:text-lg py-2 pb-8'>   Check out some of my recent work and the problems I've solved.  </p>
             </div>
             {/* Heading */}
-            
+
 
             {/* Project Card */}
             {
                 arr.map((x, i) => (
                     <div
                         key={i}
-                        className="hidden bg-transparent w-[85%] my-8 lg:flex flex-col lg:flex-row rounded-lg overflow-hidden items-center shadow-lg"
+                        className="hidden bg-transparent w-[85%] my-8 lg:my-12 lg:flex flex-col lg:flex-row rounded-lg overflow-hidden items-center "
                     >
                         {i % 2 === 0 ? (
                             <>
@@ -131,7 +160,7 @@ function Projects() {
                 arr.map((x, i) => (
                     <div
                         key={i}
-                        className=" bg-transparent w-[85%] my-8 lg:hidden flex flex-col lg:flex-row rounded-lg overflow-hidden items-center shadow-lg"
+                        className=" bg-transparent w-[85%] my-8 lg:my-12 lg:hidden flex flex-col lg:flex-row rounded-lg overflow-hidden items-center shadow-lg"
                     >
                         <>
                             {left(x)}
