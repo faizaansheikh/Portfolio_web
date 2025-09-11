@@ -2,7 +2,9 @@ import React from 'react'
 import { MainBtn, MainColor, MainLightColor } from '../utils'
 import { MdWork } from "react-icons/md";
 import { IoIosCode } from "react-icons/io";
+import { useTheme } from 'next-themes';
 function Career() {
+     const { theme } = useTheme();
     let arr = [
         {
             date: '2024 - 2025',
@@ -49,13 +51,14 @@ function Career() {
                         </div>
 
                         {/* Box Content */}
-                        <div className="sm:ml-8 mt-4 sm:mt-0 bg-[#080711] border border-[#44444E] rounded-[10px] p-4 w-full shadow-lg hover:shadow-[#5d2bbbff] relative hover:bottom-2 transition-all duration-800 ease-in-out">
+                        <div className={`sm:ml-8 mt-4 sm:mt-0 ${theme === 'light' ? '' : 'bg-[#080711]'} border border-[#44444E] rounded-[10px] p-4 w-full shadow-lg hover:shadow-[#5d2bbbff] relative hover:bottom-2 transition-all duration-800 ease-in-out`}>
                             <div className='flex items-center'>
                                 <span className='pr-2'><IoIosCode color={MainBtn} size={24} /></span>
                                 <span style={{ backgroundColor: MainLightColor, color: MainBtn }} className='p-1 rounded-[5px] w-[100px] text-center text-sm'> {x.date} </span>
                             </div>
-                            <div className="text-white font-bold text-lg sm:text-xl pt-2 pb-1">{x.title}</div>
-                            <div className="text-gray-400 text-sm sm:text-base">{x.p}</div>
+                            <div className={`${theme === 'light' ? 'text-gray-800' : 'text-white'}  font-bold text-lg sm:text-xl pt-2 pb-1`}>{x.title}</div>
+                            
+                            <div className={`${theme === 'light' ? 'text-gray-800' : 'text-gray-400'}  text-sm sm:text-base`}>{x.p}</div>
                         </div>
                     </div>
                 ))}

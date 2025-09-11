@@ -25,8 +25,9 @@ import { FaAws } from "react-icons/fa";
 import { FaDocker } from "react-icons/fa";
 
 import { IoGitBranchOutline } from "react-icons/io5";
+import { useTheme } from "next-themes";
 function Skills() {
-    // Define skills by category
+    const { theme } = useTheme();
     const skillTabs = {
         frontend: [
             { label: "HTML 5", icon: (size, color) => <IoLogoHtml5 size={size} color={color} /> },
@@ -78,7 +79,7 @@ function Skills() {
                 <p style={{ color: MainBtn }} className='text-center text-4xl font-bold py-2'>Skills & Technologies</p>
                 <p className='text-center  md:text-lg py-2'> My technical toolkit for building exceptional digital experiences 🛠️ </p>
             </div>
-           
+
 
             {/* Tabs */}
             <div className="flex gap-6 mt-8">
@@ -103,7 +104,7 @@ function Skills() {
                 {skillTabs[activeTab].map((skill, i) => (
                     <div
                         key={i}
-                        className="flex items-center flex-col justify-center bg-[#080711] text-white text-center py-3 rounded-lg shadow-md border border-[#44444E] hover:border-[#744ebaff] transition-transform transition-all duration-500 "
+                        className={`flex items-center flex-col justify-center ${theme === 'light' ? 'bg-[]' : 'bg-[#080711] text-white'}  text-center py-3 rounded-lg shadow-md border border-[#44444E] hover:border-[#744ebaff] transition-transform transition-all duration-500 `}
                     >
                         <span className="m-4">  {skill.icon(30, MainBtn)}</span>
                         {skill.label}

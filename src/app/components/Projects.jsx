@@ -11,8 +11,10 @@ import img5 from '../images/5.png'
 import img6 from '../images/4.png'
 import imgp from '../images/port.png'
 import img7 from '../images/6.png'
+import { useTheme } from 'next-themes'
 
 function Projects() {
+       const { theme } = useTheme();
     let arr = [
         {
             title: 'Inventory Management System',
@@ -96,7 +98,7 @@ function Projects() {
             <p className="font-bold text-2xl">{x.title}</p>
 
             {/* Description */}
-            <p className="text-gray-300">
+            <p className={`${theme === 'light'?'text-gray':'text-gray-300'}`}>
                 {x.desc}
             </p>
 

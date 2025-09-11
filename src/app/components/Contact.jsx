@@ -6,7 +6,9 @@ import { MdEmail } from "react-icons/md";
 import { IoLogoWhatsapp } from "react-icons/io5";
 import { FaLocationDot } from "react-icons/fa6";
 import MyButton from './MyButton';
+import { useTheme } from 'next-themes';
 function Contact() {
+    const { theme } = useTheme();
     const [values, setValues] = useState({
         name: '',
         email: '',
@@ -41,7 +43,7 @@ function Contact() {
             </div>
 
 
-           
+
 
 
             <div className='bg-[] w-[85%] h-[auto] mt-18 flex justify-around items-center flex-col lg:flex-row' >
@@ -76,23 +78,23 @@ function Contact() {
                         </div>
                     </div>
                 </div>
-                <div style={{ backgroundColor: '#080710' }} className=' w-full h-[auto] border border-[#44444E] rounded-[17px] pb-6' >
+                <div style={{ backgroundColor: theme === 'light' ? '' :'#080710' }} className=' w-full h-[auto] border border-[#44444E] rounded-[17px] pb-6' >
                     <form onSubmit={handleSubmit} >
                         <div className='flex flex-col lg:flex-row items-center justify-center gap-3 lg:gap-4 px-6 py-3'>
                             <span className='flex flex-col w-full'>
                                 <label className='py-2 text-[15px]'>Name</label>
-                                <input name='name' onChange={handleChange} type="text" required className=' bg-[#0A0915] pl-3 py-2 rounded-[10px]' placeholder='Your name' style={{ border: `1px solid ${'#44444E'}` }} />
+                                <input name='name' onChange={handleChange} type="text" required className={`${theme === 'light' ?'' :'bg-[#0A0915] '} pl-3 py-2 rounded-[10px]`} placeholder='Your name' style={{ border: `1px solid ${'#44444E'}` }} />
                             </span>
                             <span className='flex flex-col w-full'>
                                 <label className='py-2 text-[15px]'>Email</label>
-                                <input name='email' onChange={handleChange} type="text" required className=' bg-[#0A0915] pl-3 py-2 rounded-[10px]' placeholder='Your email' style={{ border: `1px solid ${'#44444E'}` }} />
+                                <input name='email' onChange={handleChange} type="text" required className={`${theme === 'light' ?'' :'bg-[#0A0915] '} pl-3 py-2 rounded-[10px]`} placeholder='Your email' style={{ border: `1px solid ${'#44444E'}` }} />
                             </span>
 
                         </div>
                         <div className='flex flex-row items-center justify-center px-6 py-2'>
                             <span className='flex flex-col w-full'>
                                 <label className='pb-2 text-[15px]'>Subject</label>
-                                <input name='subject' onChange={handleChange} type="text" required className=' bg-[#0A0915] pl-3 py-2 rounded-[10px]' placeholder='Subject' style={{ border: `1px solid ${'#44444E'}` }} />
+                                <input name='subject' onChange={handleChange} type="text" required className={`${theme === 'light' ?'' :'bg-[#0A0915] '} pl-3 py-2 rounded-[10px]`} placeholder='Subject' style={{ border: `1px solid ${'#44444E'}` }} />
                             </span>
 
 
@@ -101,13 +103,13 @@ function Contact() {
                         <div className='flex flex-row items-center justify-center px-6 py-2'>
                             <span className='flex flex-col w-full'>
                                 <label className='pb-2 text-[15px]'>Message</label>
-                                <textarea cols={6} rows={4} name='message' onChange={handleChange} type="textarea" required className=' bg-[#0A0915] pl-3 py-2 rounded-[10px]' placeholder='Message' style={{ border: `1px solid ${'#44444E'}` }} />
+                                <textarea cols={6} rows={4} name='message' onChange={handleChange} type="textarea" required className={`${theme === 'light' ?'' :'bg-[#0A0915] '} pl-3 py-2 rounded-[10px]`} placeholder='Message' style={{ border: `1px solid ${'#44444E'}` }} />
                             </span>
 
 
                         </div>
                         <div className='flex flex-row items-center justify-center pt-6 px-6 '>
-                            <MyButton label='Send Message' className='w-full ' submit='submit' />
+                            <MyButton label='Send Message' className='w-full ' submit='submit' type='fill'/>
                         </div>
                     </form>
                 </div>

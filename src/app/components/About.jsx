@@ -56,7 +56,7 @@ function About() {
                 </div>
                 <div className='w-full h-full  flex justify-center items-start flex-col pr-6 py-6 px-8'>
                     <p className='text-2xl font-bold my-2'>My Journey</p>
-                    <p className='text-md text-[grey]'> I’m a versatile Software Engineer with 4+ years of industry experience in building scalable, user-focused applications. My expertise spans the full product lifecycle — from system design and database modeling to front-end and back-end development — allowing me to deliver robust, maintainable, and high-performance solutions.
+                    <p className={`text-md ${theme === 'light' ? "text-grey-800" : "text-[grey]"} `}> I’m a versatile Software Engineer with 4+ years of industry experience in building scalable, user-focused applications. My expertise spans the full product lifecycle — from system design and database modeling to front-end and back-end development allowing me to deliver robust, maintainable, and high-performance solutions.
 
 
                         <br />
@@ -71,7 +71,7 @@ function About() {
 
 
                     <div className='mt-8'>
-                        <MyButton label='Download CV' />
+                        <MyButton label='Download CV' type=''/>
                     </div>
                 </div>
             </div>
@@ -95,7 +95,7 @@ function About() {
                                  
                                 </div> */}
                                 <div className=" font-bold text-lg sm:text-xl pt-2 pb-1 flex items-center gap-2" ><span style={{ backgroundColor: MainBtn }} className='rounded-[100%] p-2 text-white'>{x.icon}</span>{x.title}</div>
-                                <div className="text-gray-400 text-[12px] lg:text-[14px] pt-3 " >{x.p}</div>
+                                <div className={`${theme === 'light' ? 'text-gray-800' : 'text-gray-400'}  text-[12px] lg:text-[14px] pt-3`} >{x.p}</div>
                             </div>
                         </div>
                     ))}

@@ -9,7 +9,9 @@ import img1 from '../images/c2.png'
 import img2 from '../images/c3.png'
 import { TiTick } from "react-icons/ti";
 import { LiaCertificateSolid } from "react-icons/lia";
+import { useTheme } from 'next-themes';
 function Education() {
+    const { theme } = useTheme();
     let arr = [
         {
             date: 'Year 2023 - 2027',
@@ -84,16 +86,16 @@ function Education() {
                     >
 
                         {/* Step Icon */}
-                        <div className="relative z-10 flex items-center justify-center w-10 h-10 rounded-full bg-[#080711] border border-gray-500">
+                        <div className={`relative z-10 flex items-center justify-center w-10 h-10 rounded-full bg-[#080711] border border-gray-500`}>
                             {x.icon}
                         </div>
 
                         {/* Box Content */}
-                        <div className="flex justify-between sm:ml-8 mt-4 sm:mt-0 bg-[#080711] border border-[#44444E] rounded-[10px] p-4 w-full shadow-lg hover:shadow-[#5d2bbbff] relative hover:bottom-2 transition-all duration-600 ease-in-out">
+                        <div className={`flex justify-between sm:ml-8 mt-4 sm:mt-0 ${theme === 'light' ? 'bg-[]':'bg-[#080711]'} border border-[#44444E] rounded-[10px] p-4 w-full shadow-lg hover:shadow-[#5d2bbbff] relative hover:bottom-2 transition-all duration-600 ease-in-out`}>
 
 
                             <div>
-                                <div className="text-white font-bold text-lg sm:text-xl pt-2 pb-1">{x.title}</div>
+                                <div className={`${theme === 'light' ? '':'text-white'}  font-bold text-lg sm:text-xl pt-2 pb-1`}>{x.title}</div>
                                 <div style={{ color: MainBtn }} className=" text-md sm:text-[18px] pt-0 pb-1">{x.subtitle}</div>
                                 {/* <span className='pr-2'>{x.subtitle}</span> */}
                                 <div className="text-gray-400 text-sm sm:text-base">{x.p}</div>
@@ -114,7 +116,7 @@ function Education() {
 
             <div className='bg-[] h-auto lg:h-[445px] w-full sm:w-[80%] px-6 md:px-0 h-[435px] flex items-center gap-6 flex-col lg:flex-row mt-22 mb-8'>
                 {cert.map((x, i) => (
-                    <div onClick={() => window.open(x.link)} key={i} className='cursor-pointer bg-[#0A0914] w-full h-full border border-[#44444E] rounded-[10px] shadow-lg hover:shadow-[#5d2bbbff] relative hover:bottom-2 transition-all duration-800 ease-in-out my-2 lg:my-0'>
+                    <div onClick={() => window.open(x.link)} key={i} className={`cursor-pointer ${theme === 'light' ? 'bg-[]' : 'bg-[#0A0914]'} w-full h-full border border-[#44444E] rounded-[10px] shadow-lg hover:shadow-[#5d2bbbff] relative hover:bottom-2 transition-all duration-800 ease-in-out my-2 lg:my-0`}>
                         <div className='border border-[#44444E] w-full h-[200px] rounded-[10px] relative  overflow-hidden'>
                             <Image
                                 src={x.img}
@@ -134,7 +136,7 @@ function Education() {
                                 <p className='text-lg my-1' style={{ color: MainBtn }}>{x.title2}</p>
                                 {<br />}
                                 <div className='flex items-center gap-2 my-2'>
-                                    <p className='text-sm text-[grey] '>{x.date}</p>
+                                    <p className={`text-sm ${theme === 'light' ? "text-black" : "text-[grey]"}`}>{x.date}</p>
                                     <span className='px-2 py-1 text-sm rounded-[13px] flex items-center gap-1' style={{ backgroundColor: MainLightColor, color: MainBtn }}>Verified <TiTick /></span>
                                 </div>
                             </div>
