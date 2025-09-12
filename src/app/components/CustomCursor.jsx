@@ -5,7 +5,7 @@ import React, { useEffect, useRef } from 'react';
 const CustomCursor = () => {
     const { theme } = useTheme();
     const cursorRef = useRef(null);
-    console.log('dsadas');
+    
     
     useEffect(() => {
         const moveCursor = (e) => {

@@ -4,6 +4,8 @@ import { MainBtn, MainLightColor } from '../utils'
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { IoMail } from "react-icons/io5";
+import Image from 'next/image';
+import logo from '../images/logo1.png'
 function Footer() {
     // const [count, setCount] = useState(0)
     // function normal() {
@@ -16,7 +18,16 @@ function Footer() {
         <div style={{ backgroundColor: MainLightColor }} className='w-full h-[auto]  pt-12 pb-6'>
             <div className='bg-[] px-10 md:px-16  h-[auto] flex justify-between md:items-center flex-col md:flex-row'>
                 <div>
+                    <div style={{ backgroundColor: MainLightColor }} className='bg-[] w-[auto] h-[] flex items-center gap-3 py-2'>
+                        <Image
+                            src={logo}
+                            alt="Developer at desk"
+                            // fill
+                            className="object-fill w-[10%] h-full rounded-[20px]"
+
+                        />
                     <p style={{ color: MainBtn }} className='font-bold text-2xl py-2' >Faizaan Imran </p>
+                    </div>
                     <p className='text-[grey] text-sm'>Creating solutions that inspire. <br />
                         Passionate about clean code, user-focused design, and impact-driven tech <br />
                         Built by Faizaan Imran | Software Engineer & Startup Enthusiast</p>
