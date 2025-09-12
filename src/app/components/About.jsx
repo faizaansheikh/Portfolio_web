@@ -40,8 +40,12 @@ function About() {
             style={{ backgroundColor: MainLightColor }}
             className="w-full h-auto flex flex-col justify-center items-center pb-20 overflow-hidden"
         >
-           
-            <div className="flex flex-col px-4 md:px-12 pt-10 md:pt-16 text-center">
+            <div className='flex flex-col  px-12 pt-13  md:pt-18'>
+                <p style={{ color: MainBtn }} className='text-center text-4xl font-bold py-2'>About Me</p>
+                <p className='text-center  md:text-lg py-2'>Learn more about my journey, my passion, and what drives me to create
+                    outstanding digital experiences. </p>
+            </div>
+            {/* <div className="flex flex-col px-4 md:px-12 pt-10 md:pt-16 text-center">
                 <p style={{ color: MainBtn }} className="text-3xl md:text-4xl font-bold">
                     About Me
                 </p>
@@ -49,11 +53,11 @@ function About() {
                     Learn more about my journey, my passion, and what drives me to create
                     outstanding digital experiences.
                 </p>
-            </div>
+            </div> */}
 
-          
+
             <div className="w-full lg:w-[89%] h-auto lg:h-[400px] mt-10 flex flex-col lg:flex-row">
-             
+
                 <div className="w-full flex justify-center items-center px-4">
                     <Image
                         src={about}
@@ -62,8 +66,8 @@ function About() {
                     />
                 </div>
 
-            
-                <div className="w-full flex flex-col justify-start items-start px-4 md:px-8 py-6">
+
+                <div className="w-full flex flex-col justify-start items-start px-10 md:px-8 pt-8">
                     <p className="text-xl md:text-2xl font-bold my-2">My Journey</p>
                     <p
                         className={`text-sm md:text-base ${theme === "light" ? "text-gray-800" : "text-gray-400"
@@ -90,9 +94,9 @@ function About() {
                 </div>
             </div>
 
-           
+
             <div className="w-[90%] md:w-[85%] h-auto mt-12 lg:mt-20" id="service">
-                <p className="text-center text-xl md:text-3xl pt-8 pb-8 md:pb-12 font-semibold">
+                <p className="text-center text-xl md:text-3xl pt-6 pb-8 md:pb-12 font-semibold">
                     What I Provide For You
                 </p>
 

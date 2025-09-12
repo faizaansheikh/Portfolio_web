@@ -73,7 +73,7 @@ function Contact() {
                             <span>  <FaLocationDot style={{ backgroundColor: MainLightColor }} className='rounded-[50px] p-2 ' size={35} color={MainBtn} /></span>
                             <span>
                                 <p className='font-bold text-md'>Location</p>
-                                <p style={{ color: MainBtn }}>Karachi,Pakistan</p>
+                                <p style={{ color: MainBtn }}>Pakistan</p>
                             </span>
                         </div>
                     </div>

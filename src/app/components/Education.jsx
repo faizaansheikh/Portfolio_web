@@ -93,7 +93,7 @@ function Education() {
 
                         <div className={` sm:ml-8 mt-4 sm:mt-0 ${theme === 'light' ? 'bg-[]' : 'bg-[#080711]'} border border-[#44444E] rounded-[10px] p-4 w-full shadow-lg hover:shadow-[#5d2bbbff] relative hover:bottom-2 transition-all duration-600 ease-in-out`}>
                             <div className='flex justify-between items-start'>
-                                <div className={`${theme === 'light' ? '' : 'text-white'}  font-bold text-lg sm:text-xl pt-0 pb-0`}>{x.title}</div>
+                                <div className={`${theme === 'light' ? '' : 'text-white'}  font-bold text-lg sm:text-xl md:pt-1 pb-0`}>{x.title}</div>
                                 <span style={{ backgroundColor: '', color: MainBtn }} className='text-nowrap p-0 rounded-[5px]  text-center text-sm'> {x.date} </span>
                             </div>
 
