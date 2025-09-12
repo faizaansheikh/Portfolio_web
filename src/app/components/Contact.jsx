@@ -78,7 +78,7 @@ function Contact() {
                         </div>
                     </div>
                 </div>
-                <div style={{ backgroundColor: theme === 'light' ? '' :'#080710' }} className=' w-full h-[auto] border border-[#44444E] rounded-[17px] pb-6' >
+                <div style={{ backgroundColor: theme === 'light' ? '' :'#080710' }} className=' w-full h-[auto] border border-[#44444E] rounded-[17px] pb-6 mt-2' >
                     <form onSubmit={handleSubmit} >
                         <div className='flex flex-col lg:flex-row items-center justify-center gap-3 lg:gap-4 px-6 py-3'>
                             <span className='flex flex-col w-full'>
