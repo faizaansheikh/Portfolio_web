@@ -36,74 +36,97 @@ function About() {
     ];
     return (
 
-        <div style={{ backgroundColor: MainLightColor }} className='w-full h-[auto]  flex flex-col justify-center items-center pb-22' >
-            <div className='flex flex-col  px-12 pt-13  md:pt-18'>
-                <p style={{ color: MainBtn }} className='text-center text-4xl font-bold'>About Me</p>
-                <p className='text-center  md:text-lg py-2'>Learn more about my journey, my passion, and what drives me to create outstanding <br /> digital experiences. </p>
+        <div
+            style={{ backgroundColor: MainLightColor }}
+            className="w-full h-auto flex flex-col justify-center items-center pb-20 overflow-hidden"
+        >
+            {/* About Section Header */}
+            <div className="flex flex-col px-4 md:px-12 pt-10 md:pt-16 text-center">
+                <p style={{ color: MainBtn }} className="text-3xl md:text-4xl font-bold">
+                    About Me
+                </p>
+                <p className="text-sm md:text-lg py-2">
+                    Learn more about my journey, my passion, and what drives me to create
+                    outstanding digital experiences.
+                </p>
             </div>
 
-            <div className='bg-[] w-full lg:w-[89%] h-auto lg:h-[400px] mt-12 flex flex-col lg:flex-row'>
-                <div className='w-full h-full  flex justify-center items-center px-8'>
-                    {/* <div className="w-80 aspect-square rounded-xl overflow-hidden shadow-lg"> */}
+            {/* About Content */}
+            <div className="w-full lg:w-[89%] h-auto lg:h-[400px] mt-10 flex flex-col lg:flex-row">
+                {/* Image */}
+                <div className="w-full flex justify-center items-center px-4">
                     <Image
-                        src={about} // put your image inside public folder
+                        src={about}
                         alt="Developer at desk"
-                        // fill
-                        className="object-cover w-[100%] h-full rounded-[20px]"
-                    // sizes="(max-width: 768px) 100vw, 320px"
+                        className="object-cover w-full max-w-[320px] md:max-w-[400px] rounded-[20px] shadow-lg"
                     />
-                    {/* </div> */}
                 </div>
-                <div className='w-full h-full  flex justify-center items-start flex-col pr-6 py-6 px-8'>
-                    <p className='text-2xl font-bold my-2'>My Journey</p>
-                    <p className={`text-md ${theme === 'light' ? "text-grey-800" : "text-[grey]"} `}> I’m a versatile Software Engineer with 4+ years of industry experience in building scalable, user-focused applications. My expertise spans the full product lifecycle — from system design and database modeling to front-end and back-end development allowing me to deliver robust, maintainable, and high-performance solutions.
 
-
+                {/* Text */}
+                <div className="w-full flex flex-col justify-start items-start px-4 md:px-8 py-6">
+                    <p className="text-xl md:text-2xl font-bold my-2">My Journey</p>
+                    <p
+                        className={`text-sm md:text-base ${theme === "light" ? "text-gray-800" : "text-gray-400"
+                            }`}
+                    >
+                        I’m a versatile Software Engineer with 4+ years of industry experience
+                        in building scalable, user-focused applications. My expertise spans the
+                        full product lifecycle — from system design and database modeling to
+                        front-end and back-end development, allowing me to deliver robust,
+                        maintainable, and high-performance solutions.
                         <br />
                         <br />
-                        I’m passionate about writing clean, efficient code and building applications that combine functionality with seamless user experiences. My approach to development is rooted in problem-solving, continuous learning, and applying best practices to ensure long-term reliability
-                        <br />
-
-                        {/* 
-                        When I'm not coding or designing, you can find me
-                        exploring new technologies, contributing to open-source projects, or mentoring aspiring developers. */}
+                        I’m passionate about writing clean, efficient code and building
+                        applications that combine functionality with seamless user experiences.
+                        My approach to development is rooted in problem-solving, continuous
+                        learning, and applying best practices to ensure long-term reliability.
                     </p>
 
-
-                    <div className='mt-8'>
-                        <a href="/faizan_resume_.pdf" download={'Faizaan_resume.pdf'}>
-                            <MyButton label='Download CV' type='' />
+                    <div className="mt-6">
+                        <a href="/faizan_resume_.pdf" download={"Faizaan_resume.pdf"}>
+                            <MyButton label="Download CV" type="" />
                         </a>
                     </div>
                 </div>
             </div>
 
-            <div className='bg-[] w-[85%] h-auto mt-12 lg:mt-26' id='service'>
-                <p className='text-center text-2xl md:text-3xl pt-8  pb-8 md:pb-12'>What I Provide For You</p>
+            {/* Services Section */}
+            <div className="w-[90%] md:w-[85%] h-auto mt-12 lg:mt-20" id="service">
+                <p className="text-center text-xl md:text-3xl pt-8 pb-8 md:pb-12 font-semibold">
+                    What I Provide For You
+                </p>
 
-                <div className='w-full h-auto lg:h-[auto] bg-[] flex justify-around items-center  flex-wrap gap-0'>
+                <div className="w-full flex flex-wrap justify-center gap-6">
                     {arr.map((x, i) => (
                         <div
                             key={i}
-                            className={`w-full md:w-[400px] lg:w-[400px] xl:w-[600px] mb-6  `}
+                            className="w-full sm:w-[350px] lg:w-[400px] xl:w-[500px]"
                         >
-
-
-
-                            {/* Box Content */}
-                            <div className={`h-auto lg:h-[200px] text-black ${theme === 'light' ? ' bg-white' : 'text-white bg-[#080711]'} flex items-start flex-col justify-start border border-[#44444E] rounded-[10px] px-5 py-5 w-full shadow-lg hover:shadow-[#5d2bbbff] w-full hlger:bottom-2 transition-all duration-800 ease-in-out`}>
-                                {/* <div className='flex items-center'>
-                                    <span className='pr-2'><IoIosCode  size={24} /></span>
-                                 
-                                </div> */}
-                                <div className=" font-bold text-lg sm:text-xl pt-2 pb-1 flex items-center gap-2" ><span style={{ backgroundColor: MainBtn }} className='rounded-[100%] p-2 text-white'>{x.icon}</span>{x.title}</div>
-                                <div className={`${theme === 'light' ? 'text-gray-800' : 'text-gray-400'}  text-[12px] lg:text-[14px] pt-3`} >{x.p}</div>
+                            <div
+                                className={`h-auto text-black ${theme === "light" ? "bg-white" : "text-white bg-[#080711]"
+                                    } flex flex-col justify-start border border-[#44444E] rounded-[10px] px-5 py-5 shadow-lg hover:shadow-[#5d2bbbff] transition-all duration-500 ease-in-out`}
+                            >
+                                <div className="font-bold text-lg sm:text-xl pt-2 pb-1 flex items-center gap-2">
+                                    <span
+                                        style={{ backgroundColor: MainBtn }}
+                                        className="rounded-full p-2 text-white"
+                                    >
+                                        {x.icon}
+                                    </span>
+                                    {x.title}
+                                </div>
+                                <div
+                                    className={`${theme === "light" ? "text-gray-800" : "text-gray-400"
+                                        } text-sm md:text-[14px] pt-3`}
+                                >
+                                    {x.p}
+                                </div>
                             </div>
                         </div>
                     ))}
                 </div>
             </div>
-        </div >
+        </div>
 
     )
 }
