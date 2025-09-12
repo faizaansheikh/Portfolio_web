@@ -33,3 +33,11 @@ body {
   font-variation-settings:
     "wdth" 100;
 }
+/* @keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+.animate-fadeOut {
+  animation: fadeOut 1s ease-out forwards;
+  animation-delay: 2s; 
+} */
