@@ -18,9 +18,9 @@ function Main() {
   return (
     <>
 
-      <div style={{ backgroundColor: MainColor }} className='w-full h-[80px] flex justify-center'>
+      {/* <div style={{ backgroundColor: MainColor }} className='w-full h-[80px] flex justify-center'>
         <Navbar />
-      </div>
+      </div> */}
 
 
 
