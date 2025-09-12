@@ -93,7 +93,7 @@ function Projects() {
         </div>
     }
     const right = (x) => {
-        return <div className="bg-transparent w-full h-auto flex flex-col justify-center md:px-6 py-6 gap-4">
+        return <div className=" w-full h-auto flex flex-col justify-center md:px-6 py-6 gap-4">
             {/* Title */}
             <p className="font-bold text-2xl">{x.title}</p>
 
@@ -143,7 +143,7 @@ function Projects() {
                 arr.map((x, i) => (
                     <div
                         key={i}
-                        className="hidden bg-transparent w-[85%] my-8 lg:my-12 lg:flex flex-col lg:flex-row rounded-lg overflow-hidden items-center "
+                        className="hidden  w-[85%] my-8 lg:my-12 lg:flex flex-col lg:flex-row rounded-lg overflow-hidden items-center "
                     >
                         {i % 2 === 0 ? (
                             <>
@@ -163,7 +163,7 @@ function Projects() {
                 arr.map((x, i) => (
                     <div
                         key={i}
-                        className=" bg-transparent w-[85%] my-8 lg:my-12 lg:hidden flex flex-col lg:flex-row rounded-lg overflow-hidden items-center shadow-lg"
+                        className="  w-[85%] my-8 lg:my-12 lg:hidden flex flex-col lg:flex-row rounded-lg overflow-hidden items-center "
                     >
                         <>
                             {left(x)}
