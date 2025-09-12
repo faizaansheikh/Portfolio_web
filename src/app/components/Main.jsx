@@ -34,41 +34,42 @@ function Main() {
         }}
         className="w-full h-auto py-20 md:py-26 flex justify-center"
       >
-        <div className="w-[89%] h-full flex justify-center items-center flex-col md:flex-row">
-          <div>
-            <p
-              className="text-white my-0 w-auto text-[17px] px-0 py-2"
-              style={{ color: MainBtn }}
-            >
-              Welcome to my portfolio!
-            </p>
+     <div className="w-[89%] h-full flex justify-center items-center flex-col md:flex-row overflow-hidden">
+  <div>
+    <p
+      className="text-white my-0 w-auto text-[17px] px-0 py-2"
+      style={{ color: MainBtn }}
+    >
+      Welcome to my portfolio!
+    </p>
 
-            <h2 className={`${theme === 'light' ? "text-black" : "text-white"} text-6xl my-6`}>
-              Hi! My <br /> name's
-              <span style={{ color: MainBtn }} className="font-bold"> Faizaan</span>
-            </h2>
+    <h2 className={`${theme === 'light' ? "text-black" : "text-white"} text-4xl md:text-6xl my-6`}>
+      Hi! My <br /> name's
+      <span style={{ color: MainBtn }} className="font-bold"> Faizaan</span>
+    </h2>
 
-            <p className={`text-[18px] ${theme === 'light' ? "text-gray" : "text-gray-400"}  my-2 pr-12`}>
-              Full Stack Developer specializing in building intuitive, user-focused software solutions that bridge real-world needs with innovative technology. Skilled in UI/UX design and end-to-end development, I transform bold ideas into seamless, impactful digital experiences that drive business success
-            </p>
+    <p className={`text-[16px] md:text-[18px] ${theme === 'light' ? "text-gray" : "text-gray-400"} my-2 md:pr-12 pr-0`}>
+      Full Stack Developer specializing in building intuitive, user-focused software solutions that bridge real-world needs with innovative technology. Skilled in UI/UX design and end-to-end development, I transform bold ideas into seamless, impactful digital experiences that drive business success
+    </p>
 
-            <div className="mt-8">
-              <MyButton label="Get In Touch" type="fill" Click={()=>handleLinks('contact')} />
-              <MyButton label="Browse Projects" type="" className="md:ml-4"  Click={()=>handleLinks('projects')}/>
-            </div>
-          </div>
+    <div className="mt-8 flex flex-col md:flex-row gap-4">
+      <MyButton label="Get In Touch" type="fill" Click={() => handleLinks('contact')} />
+      <MyButton label="Browse Projects" type="" Click={() => handleLinks('projects')} />
+    </div>
+  </div>
 
-          <div className="w-full h-full flex flex-col items-center justify-center mt-16 md:mt-0">
-            <div className="w-[400px] h-[400px] rounded-[100px]">
-              <Image
-                src={profile}
-                alt="Developer at desk"
-                style={{ border: `3px dashed ${'grey'}` }}
-                className="object-cover w-full h-full rounded-[100%]  p-6"
-              />
-            </div>
-          </div>
-        </div>
+  <div className="w-full h-full flex flex-col items-center justify-center mt-16 md:mt-0">
+    <div className="max-w-[300px] md:max-w-[400px] aspect-square rounded-full overflow-hidden">
+      <Image
+        src={profile}
+        alt="Developer at desk"
+        style={{ border: `3px dashed grey` }}
+        className="object-cover w-full h-full p-4 rounded-full"
+      />
+    </div>
+  </div>
+</div>
+
       </div>
 
     </>
