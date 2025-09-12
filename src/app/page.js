@@ -18,13 +18,13 @@ export default function Home() {
   return (
     <div className="">
       <Main/>
-      <About/>
+      {/* <About/>
       <Career/>
-      {/* <Skills/> */}
+      <Skills/>
       <Education/>
       <Projects/>
       <Contact/>
-      <Footer/>
+      <Footer/> */}
     </div>
   );
 }
