@@ -4,7 +4,7 @@ import img1 from '../images/1.1.png'
 import MyButton from './MyButton'
 import Image from 'next/image'
 
-import img2 from '../images/Screenshot 2025-09-11 181355.png'
+import img2 from '../images/rent.png'
 import img3 from '../images/2.png'
 import img4 from '../images/3.png'
 import img5 from '../images/5.png'
@@ -28,7 +28,7 @@ function Projects() {
             title: 'Car Renting System',
             desc: 'Introducing our car renting system: effortlessly book the perfect car for any occasion. This platform offers a diverse selection of vehicles with detailed descriptions and photos. Simply choose, book, and go! our React-powered admin panel streamlines operations. Manage bookings, update listings, and monitor performance from one centralized hub',
             techs: ['React.js', 'Node.js', 'MongoDB'],
-            demo: 'https://automobile-rental-app-psi.vercel.app/login',
+            demo: 'https://automobile-rental-app-psi.vercel.app/dashboard',
             code: 'https://github.com/faizaansheikh/library_app',
             img: img2
         },
@@ -82,7 +82,7 @@ function Projects() {
         }
     ]
     const left = (x) => {
-        return <div className="bg-red-500 w-full h-[250px] lg:h-[400px] rounded-[20px]">
+        return <div className="bg-red-500 w-full h-[250px] lg:h-[400px] rounded-[20px] border border-black">
             <Image
                 src={x.img} // put your image inside public folder
                 alt="Developer at desk"

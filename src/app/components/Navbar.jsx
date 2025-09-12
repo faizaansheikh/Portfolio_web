@@ -4,9 +4,18 @@ import { MainBtn, MainColor, MainLightColor } from '../utils'
 import ToggleTheme from './ToggleTheme';
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useTheme } from 'next-themes';
-
+import { FaHome } from "react-icons/fa";
+import { MdMiscellaneousServices } from "react-icons/md";
+import { BsPersonWorkspace } from "react-icons/bs";
+import { SiHyperskill } from "react-icons/si";
+import { GoProjectSymlink } from "react-icons/go";
+import { IoMdContact } from "react-icons/io";
+import { PiCertificateBold } from "react-icons/pi";
+import logo from '../images/logo1.png'
+import Image from 'next/image';
 function Navbar() {
     const [active, setActive] = useState("main");
+    const [bar, setBar] = useState(false);
     const { theme } = useTheme();
 
     const navLists = [
@@ -25,13 +34,38 @@ function Navbar() {
         if (section) {
             section.scrollIntoView({ behavior: "smooth" });
         }
+        setBar(false)
     }
-
+    const iconRender = (label) => {
+        if (label === 'Home') {
+            return <FaHome size={18} />
+        } else if (label === 'Services') {
+            return <MdMiscellaneousServices size={21} />
+        } else if (label === 'Experience') {
+            return <BsPersonWorkspace size={16} />
+        } else if (label === 'Skills') {
+            return <SiHyperskill size={16} />
+        } else if (label === 'Certifications') {
+            return <PiCertificateBold size={18} />
+        } else if (label === 'Projects') {
+            return <GoProjectSymlink size={18} />
+        } else if (label === 'Contact') {
+            return <IoMdContact size={18} />
+        }
+    }
     return (
         <>
-            <div style={{ backgroundColor: MainColor }} className='hidden md:flex w-full px-22 h-[80px] justify-between fixed z-20'>
+            <div style={{ backgroundColor: MainColor }} className='hidden lg:flex w-full px-22 h-[80px] justify-between fixed z-20'>
                 <div className='flex items-center'>
-                    <div className='bg-[blue] w-[90px] h-full'></div>
+                    <div style={{ backgroundColor: MainLightColor }} className='bg-[] w-[80px] h-[70px] p-2'>
+                        <Image
+                            src={logo}
+                            alt="Developer at desk"
+                            // fill
+                            className="object-fill w-[100%] h-full rounded-[20px]"
+
+                        />
+                    </div>
                 </div>
                 <div className='flex items-center w-auto h-full'>
                     <ul className='flex items-center '>
@@ -66,15 +100,39 @@ function Navbar() {
                 </div>
             </div>
 
-            <div style={{ backgroundColor: MainColor }} className='w-full h-[80px] flex justify-between  px-4 md:hidden fixed z-20'>
+            <div style={{ backgroundColor: MainColor }} className='w-full h-[80px] flex justify-between  px-4 lg:hidden fixed z-20'>
                 <div className='flex items-center'>
-                    <div className='bg-[blue] w-[90px] h-full'></div>
+                    <div style={{ backgroundColor: MainLightColor }} className='bg-[] w-[80px] h-[70px] p-2'>
+                        <Image
+                            src={logo}
+                            alt="Developer at desk"
+                            // fill
+                            className="object-fill w-[100%] h-full rounded-[20px]"
+
+                        />
+                    </div>
                 </div>
                 <div>
                     <div className='w-[90px] h-full flex items-center justify-center'>
-                        <GiHamburgerMenu size={20} />
+                        <span className='px-4 mt-1'> <ToggleTheme size={23} /></span>
+                        <GiHamburgerMenu size={23} onClick={() => setBar(!bar)} />
                     </div>
                 </div>
+            </div>
+
+
+            <div className='w-full z-19 transition-all duration-300 mt-24 ease-in flex justify-center fixed' style={{ backgroundColor: MainColor, height: bar ? '385px' : 0 }}>
+                {bar && <div className='bg-[]  h-full w-[80%] mt-6 '>
+
+
+                    {navLists.map((x, i) => (
+                        <span key={i} className='flex items-center' onClick={() => handleLinks(x.link)}>
+                            {iconRender(x.label)}
+                            <p className='py-3 text-[17px] px-4'>{x.label}</p>
+                        </span>
+                    ))}
+
+                </div>}
             </div>
         </>
     )

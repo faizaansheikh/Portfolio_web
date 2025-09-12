@@ -7,7 +7,14 @@ import profile from '../images/main1.jpg'
 import { useTheme } from 'next-themes'
 function Main() {
   const { theme, setTheme } = useTheme();
-
+  const handleLinks = (id) => {
+  
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+   
+  }
   return (
     <>
 
@@ -42,14 +49,12 @@ function Main() {
             </h2>
 
             <p className={`text-[18px] ${theme === 'light' ? "text-gray" : "text-gray-400"}  my-2 pr-12`}>
-              Full Stack Developer crafting intuitive software that seamlessly connects real user needs with innovative technology.
-              With a strong foundation in UI/UX design and end-to-end development,
-              I bring bold ideas to life and deliver impactful, user-centric experiences.
+              Full Stack Developer specializing in building intuitive, user-focused software solutions that bridge real-world needs with innovative technology. Skilled in UI/UX design and end-to-end development, I transform bold ideas into seamless, impactful digital experiences that drive business success
             </p>
 
             <div className="mt-8">
-              <MyButton label="Get In Touch" type="fill" />
-              <MyButton label="Browse Projects" type="" className="md:ml-4" />
+              <MyButton label="Get In Touch" type="fill" Click={()=>handleLinks('contact')} />
+              <MyButton label="Browse Projects" type="" className="md:ml-4"  Click={()=>handleLinks('projects')}/>
             </div>
           </div>
 

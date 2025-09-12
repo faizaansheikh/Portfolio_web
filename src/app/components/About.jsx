@@ -23,7 +23,7 @@ function About() {
         },
         {
             date: '2022 - 2024',
-            title: 'Web Apps Development',
+            title: 'Web Applications Development',
             p: 'I deliver Web Applications solutions including  dashboards, e-commerce platforms,inventory systems, ERP, SaaS products, and real-time solutions that are scalable, secure, and performance-driven, tailored to meet business requirements while ensuring seamless user experiences across platforms.',
             icon: <MdWork size={20} />
         },
@@ -71,7 +71,9 @@ function About() {
 
 
                     <div className='mt-8'>
-                        <MyButton label='Download CV' type=''/>
+                        <a href="/faizan_resume_.pdf" download={'Faizaan_resume.pdf'}>
+                            <MyButton label='Download CV' type='' />
+                        </a>
                     </div>
                 </div>
             </div>

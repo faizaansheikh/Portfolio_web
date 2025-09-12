@@ -48,7 +48,7 @@ function Education() {
         },
         {
             img: img,
-            title: 'Javascript Algorithms And Data Structures',
+            title: 'Javascript Algorithms And DSA',
             title2: 'freeCodeCamp',
             date: '2022',
             link: 'https://www.freecodecamp.org/certification/Faizaan_sheikh/javascript-algorithms-and-data-structures'
