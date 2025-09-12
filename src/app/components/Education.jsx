@@ -73,10 +73,10 @@ function Education() {
 
 
 
-            {/* Vertical Steps */}
+
 
             <div className="relative w-full sm:w-[80%] mt-6 md:mt-10 px-4 sm:px-0">
-                {/* Vertical line (only visible on medium+) */}
+
                 <div className="hidden sm:block absolute left-5 top-0 bottom-0 w-[1px] bg-gray-600"></div>
 
                 {arr.map((x, i) => (
@@ -85,25 +85,25 @@ function Education() {
                         className="relative flex flex-col sm:flex-row items-start mb-10 "
                     >
 
-                        {/* Step Icon */}
+
                         <div className={`relative z-10 flex items-center justify-center w-10 h-10 rounded-full bg-[#080711] border border-gray-500`}>
                             {x.icon}
                         </div>
 
-                        {/* Box Content */}
-                        <div className={`flex justify-between sm:ml-8 mt-4 sm:mt-0 ${theme === 'light' ? 'bg-[]':'bg-[#080711]'} border border-[#44444E] rounded-[10px] p-4 w-full shadow-lg hover:shadow-[#5d2bbbff] relative hover:bottom-2 transition-all duration-600 ease-in-out`}>
 
-
-                            <div>
-                                <div className={`${theme === 'light' ? '':'text-white'}  font-bold text-lg sm:text-xl pt-2 pb-1`}>{x.title}</div>
-                                <div style={{ color: MainBtn }} className=" text-md sm:text-[18px] pt-0 pb-1">{x.subtitle}</div>
-                                {/* <span className='pr-2'>{x.subtitle}</span> */}
-                                <div className="text-gray-400 text-sm sm:text-base">{x.p}</div>
-                            </div>
-                            <div className='w-[200px] flex justify-end'>
-
+                        <div className={` sm:ml-8 mt-4 sm:mt-0 ${theme === 'light' ? 'bg-[]' : 'bg-[#080711]'} border border-[#44444E] rounded-[10px] p-4 w-full shadow-lg hover:shadow-[#5d2bbbff] relative hover:bottom-2 transition-all duration-600 ease-in-out`}>
+                            <div className='flex justify-between '>
+                                <div className={`${theme === 'light' ? '' : 'text-white'}  font-bold text-lg sm:text-xl pt-2 pb-1`}>{x.title}</div>
                                 <span style={{ backgroundColor: '', color: MainBtn }} className='text-nowrap p-1 rounded-[5px]  text-center text-sm'> {x.date} </span>
                             </div>
+
+                            <div>
+
+                                <div style={{ color: MainBtn }} className=" text-md sm:text-[18px] pt-0 pb-1">{x.subtitle}</div>
+                               
+                                <div className="text-gray-400 text-sm sm:text-base">{x.p}</div>
+                            </div>
+                          
 
 
                         </div>
@@ -114,7 +114,7 @@ function Education() {
 
             {/* Certificates */}
 
-            <div className='bg-[] h-auto lg:h-[445px] w-full sm:w-[80%] px-6 md:px-0 h-[435px] flex items-center gap-6 flex-col lg:flex-row mt-22 mb-8'>
+            <div className='bg-[] h-auto lg:h-[445px] w-full sm:w-[80%] px-8 md:px-0 h-[435px] flex items-center gap-6 flex-col lg:flex-row mt-22 mb-8'>
                 {cert.map((x, i) => (
                     <div onClick={() => window.open(x.link)} key={i} className={`cursor-pointer ${theme === 'light' ? 'bg-[]' : 'bg-[#0A0914]'} w-full h-full border border-[#44444E] rounded-[10px] shadow-lg hover:shadow-[#5d2bbbff] relative hover:bottom-2 transition-all duration-800 ease-in-out my-2 lg:my-0`}>
                         <div className='border border-[#44444E] w-full h-[200px] rounded-[10px] relative  overflow-hidden'>

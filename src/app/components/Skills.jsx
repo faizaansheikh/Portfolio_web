@@ -77,12 +77,12 @@ function Skills() {
             {/* Heading */}
             <div className='flex flex-col  px-12 pt-13  md:pt-18'>
                 <p style={{ color: MainBtn }} className='text-center text-4xl font-bold py-2'>Skills & Technologies</p>
-                <p className='text-center  md:text-lg py-2'> My technical toolkit for building exceptional digital experiences 🛠️ </p>
+                <p className='text-center  md:text-lg py-2'> My technical toolkit for building exceptional digital experiences  </p>
             </div>
 
 
             {/* Tabs */}
-            <div className="flex gap-6 mt-8">
+            <div className="flex gap-6 mt-8 mx-12">
                 {Object.keys(skillTabs).map((tab) => (
                     <button
                         key={tab}
@@ -92,7 +92,7 @@ function Skills() {
                                 activeTab === tab ? `3px solid ${MainBtn}` : "3px solid transparent",
                             color: activeTab === tab ? MainBtn : "#888",
                         }}
-                        className="text-lg font-semibold px-4 pb-2 transition-colors"
+                        className="md:text-lg font-semibold px-4 pb-2 transition-colors"
                     >
                         {tab.charAt(0).toUpperCase() + tab.slice(1)}
                     </button>
