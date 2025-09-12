@@ -34,7 +34,7 @@ export default function RootLayout({ children }) {
 
           {children}
         </ThemeProvider>
-        {/* <CustomCursor/> */}
+        <CustomCursor/>
       </body>
     </html>
   );
